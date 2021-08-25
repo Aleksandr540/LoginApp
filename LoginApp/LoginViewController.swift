@@ -18,18 +18,16 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        userNameTF.text = userName ?? "q"
-//        passwordTF.text = password ?? "q"
-    }
-    
+
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if userNameTF.text != "UI" || passwordTF.text != "Kit" {addAlert(with: "Invalid login or password", and: "Please enter correct login or password")}
-//        else {
+        if userNameTF.text != "UI" || passwordTF.text != "Kit" {addAlert(with: "Invalid login or password", and: "Please enter correct login or password")}
+        else {
             guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
         welcomeVC.welcome = userNameTF.text
             
             
-//      
+        }
     }
     @IBAction func forgotNamePressed() {
         addAlert(with: "Hello!", and: "Your name is UI")
