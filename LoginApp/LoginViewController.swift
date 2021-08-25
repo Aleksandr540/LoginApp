@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
@@ -17,18 +17,27 @@ class LoginViewController: UIViewController {
     var password: String!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-
+        userNameTF.delegate = self
+        passwordTF.delegate = self
+        
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if userNameTF.text != "UI" || passwordTF.text != "Kit" {addAlert(with: "Invalid login or password", and: "Please enter correct login or password")}
+            
         else {
             guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
-        welcomeVC.welcome = userNameTF.text
-            
-            
+            welcomeVC.welcome = userNameTF.text
         }
     }
+    
+   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch: UITouch = touches.first!
+        let touchPoint: CGPoint = touch.location(in: view)
+    userNameTF.resignFirstResponder()
+            passwordTF.resignFirstResponder()        }
+    
+    
     @IBAction func forgotNamePressed() {
         addAlert(with: "Hello!", and: "Your name is UI")
     }
@@ -36,17 +45,17 @@ class LoginViewController: UIViewController {
         addAlert(with: "Hi!", and: "Your password is Kit")
     }
     
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userNameTF.text = ""
+        passwordTF.text = ""
+    }
+    
     func addAlert (with title:String, and message:String){
         let alertName = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alertName.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alertName, animated: true, completion: nil)
     }
-    @IBAction func unwind(for segue: UIStoryboardSegue) {
-        userNameTF.text = ""
-        passwordTF.text = ""
-    }
 }
-
 
 
 

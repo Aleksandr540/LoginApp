@@ -16,8 +16,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        welcome = "Hard code"
-        welcomeLabel.text = welcome
+        welcomeLabel.text = String("Welcome \(String(welcome))")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,13 +25,12 @@ class WelcomeViewController: UIViewController {
     }
     
     func setGradientBackground() {
-
+        
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.blue.cgColor, UIColor.orange.cgColor]
         gradientLayer.locations = [0.0, 1.0]
         gradientLayer.frame = self.view.bounds
-
+        
         self.view.layer.insertSublayer(gradientLayer, at:0)
     }
-    
 }
