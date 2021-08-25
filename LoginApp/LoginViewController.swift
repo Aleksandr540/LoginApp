@@ -19,7 +19,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         userNameTF.delegate = self
         passwordTF.delegate = self
-        
+        userNameTF.returnKeyType = .next
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -32,8 +32,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        userNameTF.resignFirstResponder()
-        passwordTF.resignFirstResponder()
         view.endEditing(true)
         super.touchesBegan(touches, with: event)
     }
@@ -58,11 +56,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         userNameTF.resignFirstResponder()
-        passwordTF.resignFirstResponder()
+        
+        passwordTF.returnKeyType = .done
+        passwordTF.becomeFirstResponder()
+        
         return true
-
     }
 }
-
-
 
