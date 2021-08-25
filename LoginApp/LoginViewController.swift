@@ -16,8 +16,17 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    @IBAction func logInPressed() {
-       addAlert(with: "Invalid login or password", and: "Please enter correct login or password")
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if userNameTF.text == "UI" || passwordTF.text == "Kit" {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
+        welcomeVC.welcomeLabel.text = String(userNameTF.text ?? "")
+            
+            addAlert(with: "Invalid login or password", and: "Please enter correct login or password")
+    
+
+        }
+       
         }
     @IBAction func forgotNamePressed() {
        addAlert(with: "Hello!", and: "Your name is UI")

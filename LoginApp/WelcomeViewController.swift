@@ -10,8 +10,14 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
+    var welcome: String!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        welcomeLabel.text = welcome
     }
     
     override func viewWillAppear(_ animated: Bool) {
