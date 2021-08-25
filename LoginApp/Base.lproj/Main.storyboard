@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3cV-pD-i4i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -36,6 +36,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfu-DZ-w6j">
                                         <rect key="frame" x="126" y="0.0" width="42" height="30"/>
                                         <state key="normal" title="Log in"/>
+                                        <connections>
+                                            <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="RP0-sh-S0i"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="a80-At-6P4">
                                         <rect key="frame" x="6.5" y="59" width="281" height="30"/>
@@ -43,10 +46,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqS-Bi-qSF">
                                                 <rect key="frame" x="0.0" y="0.0" width="133" height="30"/>
                                                 <state key="normal" title="Forgot User Name?"/>
+                                                <connections>
+                                                    <action selector="forgotNamePressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iiv-8M-FqP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OB5-QS-oeu">
                                                 <rect key="frame" x="158" y="0.0" width="123" height="30"/>
                                                 <state key="normal" title="Forgot Password?"/>
+                                                <connections>
+                                                    <action selector="forgotPasswordPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="d8z-Gf-VGq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -65,6 +74,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTF" destination="2ne-ok-jmZ" id="hTH-qK-vBt"/>
+                        <outlet property="userNameTF" destination="szh-so-c4i" id="ysx-ww-cFF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
