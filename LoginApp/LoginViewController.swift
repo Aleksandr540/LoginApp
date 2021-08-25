@@ -31,12 +31,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch: UITouch = touches.first!
-        let touchPoint: CGPoint = touch.location(in: view)
-    userNameTF.resignFirstResponder()
-            passwordTF.resignFirstResponder()        }
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        userNameTF.resignFirstResponder()
+        passwordTF.resignFirstResponder()
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
     
     @IBAction func forgotNamePressed() {
         addAlert(with: "Hello!", and: "Your name is UI")
@@ -54,6 +54,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let alertName = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alertName.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alertName, animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        userNameTF.resignFirstResponder()
+        passwordTF.resignFirstResponder()
+        return true
+
     }
 }
 
