@@ -142,7 +142,23 @@
             </objects>
             <point key="canvasLocation" x="1545" y="97"/>
         </scene>
-        <!--Title-->
+        <!--Фото-->
+        <scene sceneID="oCP-cU-XcL">
+            <objects>
+                <viewController id="ZpG-ky-WgZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nS9-8R-FnK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="mxe-Ig-RWU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Фото" largeTitleDisplayMode="always" id="s9V-13-YtK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D25-1H-1Bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3090" y="517"/>
+        </scene>
+        <!--Коротко обо мне-->
         <scene sceneID="hwb-WF-mk7">
             <objects>
                 <viewController id="8XF-tp-ygt" sceneMemberID="viewController">
@@ -152,11 +168,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="3HS-Af-ngh"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="always" id="Ilq-I8-NEG"/>
+                    <navigationItem key="navigationItem" title="Коротко обо мне" largeTitleDisplayMode="always" id="Ilq-I8-NEG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9lG-IJ-QM6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3094" y="97"/>
+            <point key="canvasLocation" x="3090" y="-250"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gbj-0u-uTW">
@@ -170,6 +186,7 @@
                     <connections>
                         <segue destination="3cV-pD-i4i" kind="relationship" relationship="viewControllers" id="8vH-gT-kxI"/>
                         <segue destination="U4q-IS-M6U" kind="relationship" relationship="viewControllers" id="Ctf-AN-rtx"/>
+                        <segue destination="s9t-Hv-xY9" kind="relationship" relationship="viewControllers" id="cbS-wS-mmK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2p-sH-1DJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -193,12 +210,32 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGt-wO-w4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2296.875" y="99.295774647887328"/>
+            <point key="canvasLocation" x="2327" y="-250"/>
+        </scene>
+        <!--Photo-->
+        <scene sceneID="h24-jW-0O4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s9t-Hv-xY9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Photo" image="photo" catalog="system" id="Qjp-0I-XjX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pyu-Nh-hBQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZpG-ky-WgZ" kind="relationship" relationship="rootViewController" id="2lP-h1-tHD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pe1-x8-FuH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2327" y="517"/>
         </scene>
     </scenes>
     <resources>
         <image name="hello" width="512" height="512"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
     </resources>
 </document>
