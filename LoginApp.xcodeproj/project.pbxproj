@@ -14,6 +14,7 @@
 		E93450B526D6A2C70009A090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E93450B426D6A2C70009A090 /* Assets.xcassets */; };
 		E93450B826D6A2C70009A090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E93450B626D6A2C70009A090 /* LaunchScreen.storyboard */; };
 		E93450C026D6AB080009A090 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93450BF26D6AB080009A090 /* WelcomeViewController.swift */; };
+		E9557AB226DC3C8E00E3B84C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9557AB126DC3C8E00E3B84C /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E93450B726D6A2C70009A090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E93450B926D6A2C70009A090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E93450BF26D6AB080009A090 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		E9557AB126DC3C8E00E3B84C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,24 +60,57 @@
 		E93450AA26D6A2C30009A090 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				E93450AB26D6A2C30009A090 /* AppDelegate.swift */,
-				E93450AD26D6A2C30009A090 /* SceneDelegate.swift */,
-				E93450AF26D6A2C30009A090 /* LoginViewController.swift */,
-				E93450B126D6A2C30009A090 /* Main.storyboard */,
-				E93450BF26D6AB080009A090 /* WelcomeViewController.swift */,
-				E9557A8626DBBB5700E3B84C /* New Group */,
-				E93450B426D6A2C70009A090 /* Assets.xcassets */,
-				E93450B626D6A2C70009A090 /* LaunchScreen.storyboard */,
-				E93450B926D6A2C70009A090 /* Info.plist */,
+				E9557AB326DC3C9B00E3B84C /* Models */,
+				E9557AAE26DC3BA600E3B84C /* ViewControllers */,
+				E9557AB026DC3BD600E3B84C /* Storyboards */,
+				E9557A8626DBBB5700E3B84C /* Resurses */,
+				E9557AAF26DC3BCC00E3B84C /* App */,
 			);
 			path = LoginApp;
 			sourceTree = "<group>";
 		};
-		E9557A8626DBBB5700E3B84C /* New Group */ = {
+		E9557A8626DBBB5700E3B84C /* Resurses */ = {
 			isa = PBXGroup;
 			children = (
+				E93450B426D6A2C70009A090 /* Assets.xcassets */,
 			);
-			path = "New Group";
+			path = Resurses;
+			sourceTree = "<group>";
+		};
+		E9557AAE26DC3BA600E3B84C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E93450AF26D6A2C30009A090 /* LoginViewController.swift */,
+				E93450BF26D6AB080009A090 /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E9557AAF26DC3BCC00E3B84C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E93450AB26D6A2C30009A090 /* AppDelegate.swift */,
+				E93450AD26D6A2C30009A090 /* SceneDelegate.swift */,
+				E93450B926D6A2C70009A090 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E9557AB026DC3BD600E3B84C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E93450B126D6A2C30009A090 /* Main.storyboard */,
+				E93450B626D6A2C70009A090 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E9557AB326DC3C9B00E3B84C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E9557AB126DC3C8E00E3B84C /* Person.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9557AB226DC3C8E00E3B84C /* Person.swift in Sources */,
 				E93450B026D6A2C30009A090 /* LoginViewController.swift in Sources */,
 				E93450C026D6AB080009A090 /* WelcomeViewController.swift in Sources */,
 				E93450AC26D6A2C30009A090 /* AppDelegate.swift in Sources */,
@@ -298,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MG4HXX9SVN;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MG4HXX9SVN;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
