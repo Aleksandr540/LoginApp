@@ -63,11 +63,19 @@
 				E93450AF26D6A2C30009A090 /* LoginViewController.swift */,
 				E93450B126D6A2C30009A090 /* Main.storyboard */,
 				E93450BF26D6AB080009A090 /* WelcomeViewController.swift */,
+				E9557A8626DBBB5700E3B84C /* New Group */,
 				E93450B426D6A2C70009A090 /* Assets.xcassets */,
 				E93450B626D6A2C70009A090 /* LaunchScreen.storyboard */,
 				E93450B926D6A2C70009A090 /* Info.plist */,
 			);
 			path = LoginApp;
+			sourceTree = "<group>";
+		};
+		E9557A8626DBBB5700E3B84C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

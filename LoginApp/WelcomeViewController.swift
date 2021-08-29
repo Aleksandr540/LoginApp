@@ -12,26 +12,20 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
     
-    var welcome: String!
+    var user = ""
     
-    override func viewDidLoad() {
+    override func viewDidLoad() { 
         super.viewDidLoad()
-        welcomeLabel.text = String("Welcome \(String(welcome))")
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         setGradientBackground()
-        super.viewWillAppear(animated)
+        welcomeLabel.text = "Welcome \(user)"
     }
-    
+    // MARK: - Set gradient background color
     func setGradientBackground() {
-        
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.blue.cgColor, UIColor.orange.cgColor]
         gradientLayer.locations = [0.0, 1.0]
-        gradientLayer.frame = self.view.bounds
-        
-        self.view.layer.insertSublayer(gradientLayer, at:0)
+        gradientLayer.frame = view.bounds
+        view.layer.insertSublayer(gradientLayer, at:0)
     }
 
 }
